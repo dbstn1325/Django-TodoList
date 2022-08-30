@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="09d02492-cd85-47cb-88bb-b01536eba2b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/playapp/templates/pages/play_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/pro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/playapp/templatetags/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/playapp/templates/pages/play_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/playapp/templates/pages/play_list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/playapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/playapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -39,6 +42,7 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/yoonsu/Desktop/pro"
   }
 }]]></component>
