@@ -8,12 +8,12 @@ class Play(models.Model):
         SOCIAL = 'SOCIAL', _('사회')
         OWN = 'OWN', _('개인')
     title = models.CharField(max_length=90, null=False)
-    playType = models.CharField(
+    type = models.CharField(
         choices=PlayType.choices,
         max_length=25,
         default=PlayType.JOB
     )
-    due = models.DateTimeField(null=False)
+    dead_line = models.DateTimeField(null=False)
     created_at = models.DateTimeField(auto_now_add=True, null=False)
 
 

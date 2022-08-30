@@ -17,11 +17,14 @@ from django.urls import path
 from playapp import views
 from django.conf import settings
 from django.conf.urls.static import static
+from playapp.views import PlaylistView, PlayCreateView, PlayPreviousListView
 
 urlpatterns = [
-    path('', views.index, name="index"),
-    path('previous/', views.index, name="task-previous"),
-    path('play/', views.index, name="play-create"),
+    # path('', views.index, name="index"),
+    path('', PlaylistView.as_view(), name="index"),
+    path('play/', PlayCreateView.as_view(), name="create-play"),
+    path('previous/', PlayPreviousListView.as_view(), name="play-previous"),
+
     path('play/<int:play_id>/', views.index, name="view-play"),
     path('play/<int:play_id>/delete/', views.index, name="play-delete"),
     path('play/<int:play_id>/item/', views.index, name="create-item"),
