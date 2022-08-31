@@ -17,17 +17,19 @@ from django.urls import path
 from playapp import views
 from django.conf import settings
 from django.conf.urls.static import static
-from playapp.views import PlaylistView, PlayCreateView, PlayPreviousListView
+from playapp.views import ChecklistCreate, ChecklistUpdateView, PlayDetailView, PlaylistView, \
+    PlayCreateView, PlayPreviousListView
 
 urlpatterns = [
     # path('', views.index, name="index"),
     path('', PlaylistView.as_view(), name="index"),
     path('play/', PlayCreateView.as_view(), name="create-play"),
     path('previous/', PlayPreviousListView.as_view(), name="play-previous"),
-
-    path('play/<int:play_id>/', views.index, name="view-play"),
+    path('play/<int:play_id>/', PlayDetailView.as_view(), name="view-play"),
+    path('play/<int:play_id>/item/', ChecklistCreate.as_view(), name="create-item"),
+    path('play/<int:play_id>/item/<int:check_id>/', ChecklistUpdateView.as_view(), name="check-item"),
+    
+    
     path('play/<int:play_id>/delete/', views.index, name="play-delete"),
-    path('play/<int:play_id>/item/', views.index, name="create-item"),
-    path('play/<int:play_id>/item/<int:item_id>/', views.index, name="check-item"),
-    path('play/<int:play_id>/item/<int:item_id>/delete/', views.index, name="delete-item"),
+    path('play/<int:play_id>/item/<int:check_id>/delete/', views.index, name="delete-item"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
